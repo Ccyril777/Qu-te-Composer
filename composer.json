@@ -1,0 +1,14 @@
+{
+    "name": "quete_composer/composer",
+    "description": "Quête Composer pour la WCS",
+    "authors": [
+        {
+            "name": "salazhar",
+            "email": "canoine.cyril@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "swiftmailer/swiftmailer": "^6.2"
+    }
+}
