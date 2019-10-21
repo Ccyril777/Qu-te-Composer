@@ -1,13 +1,15 @@
 <?php
 
-use HelloWorld\SayHello;
-use App\Wcs\Hello;
+    require "../vendor/autoload.php";
 
-require __DIR__ . '/../vendor/autoload.php';
-
-$hello = new Hello();
-    echo $hello->helloWorld();
-    echo "<br>";
+    use HelloWorld\SayHello;
     
-$helloWorld = new SayHello();
-    echo $helloWorld->world();
+    $varHelloWorld = new SayHello;
+
+        echo $varHelloWorld->World();
+        echo '<br/>';
+
+    use App\Wcs\Hello;
+
+        $var = new Hello;
+        echo $var->talk();  

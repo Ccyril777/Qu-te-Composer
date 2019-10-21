@@ -30,6 +30,10 @@ class ComposerStaticInitca0c5b12f6085ffe8726785a0735c895
         array (
             'Doctrine\\Common\\Lexer\\' => 22,
         ),
+        'A' => 
+        array (
+            'App\\Wcs\\' => 8,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -57,6 +61,20 @@ class ComposerStaticInitca0c5b12f6085ffe8726785a0735c895
         array (
             0 => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer',
         ),
+        'App\\Wcs\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Wcs',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'H' => 
+        array (
+            'HelloWorld' => 
+            array (
+                0 => __DIR__ . '/..' . '/ehime/hello-world/src',
+            ),
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -64,6 +82,7 @@ class ComposerStaticInitca0c5b12f6085ffe8726785a0735c895
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitca0c5b12f6085ffe8726785a0735c895::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitca0c5b12f6085ffe8726785a0735c895::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitca0c5b12f6085ffe8726785a0735c895::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
